@@ -1,0 +1,322 @@
+:root {
+    --primary-color: #e50914;
+    --dark-color: #141414;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', 'sans-serif';
+    -webkit-font-smoothing: antialiased;
+    background: #000;
+    color: #999;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+.showcase {
+    width: 100%;
+    height: 93vh;
+    position: relative;
+    background: url('../img/Netflix-Background.jpg') no-repeat center center/cover;
+}
+
+.showcase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 120px 100px 250px #000, inset -120px -100px 250px #000;
+    ;
+}
+
+.showcase-top {
+    position: relative;
+    height: 90px;
+    margin-left: 25px;
+    z-index: 2;
+    margin-right: 25px;
+}
+
+.showcase-content {
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 12rem;
+    z-index: 2;
+}
+
+.showcase-content h1 {
+    width: 50rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin: 0 0 1rem;
+}
+
+.showcase-content h5 {
+    font-weight: 600;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+}
+
+.showcase-content p {
+    color: white;
+    font-weight: 400;
+}
+
+.showcase-content input {
+    padding: 1.75rem 0;
+    padding-left: 1rem;
+    padding-right: 10rem;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    margin: none;
+}
+
+.showcase-top img {
+    width: 170px;
+    position: absolute;
+    top: 25%;
+    left: 0%;
+}
+
+.showcase-top a {
+    position: absolute;
+    top: 25%;
+    right: 0;
+}
+
+
+/* Tabs */
+
+.tabs {
+    background: var(--dark-color);
+    padding-top: 1rem;
+    border-bottom: 3px solid #3d3d3d;
+}
+
+.tabs .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.tabs p {
+    font-size: 1.2rem;
+    padding-top: 0.5rem;
+}
+
+.tabs .container>div {
+    padding: 1.5rem 0;
+}
+
+.tabs .container>div:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.tab-border {
+    border-bottom: var(--primary-color) 4px solid;
+}
+
+
+/* Sections */
+
+.tab-content {
+    padding: 3rem 0;
+    background: #000;
+    color: #fff;
+    margin: auto;
+}
+
+#tab-1-content>div {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 2rem;
+    align-items: center;
+    margin: 5rem 0;
+    padding: 2rem 0;
+    border-bottom: 5px grey solid;
+}
+
+#tab-1-content img {
+    width: 500px;
+}
+
+#tab-2-content .tab-2-content-inner {
+    display: grid;
+    grid-template-columns: repeat( 2, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#tab-2-content .tab-2-content-inner img {
+    width: 500px;
+}
+
+#tab-3-content .tab-3-content-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#tab-3-content .tab-3-content-bottom {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#tab-3-content .tab-3-content-bottom img {
+    width: 400px;
+}
+
+
+/* Table */
+
+.table {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table thead th {
+    text-transform: uppercase;
+    padding: 0.8rem;
+}
+
+.table tbody tr td {
+    color: #999;
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+}
+
+.table tbody tr td:first-child {
+    text-align: left;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #222;
+}
+
+
+/* Container */
+
+.container {
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem
+}
+
+
+/* Text Styles */
+
+.text-xl {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.text-md {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-dark {
+    color: #999;
+}
+
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    padding: 0.5rem 1.3rem;
+    border-radius: 3px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 1px 0 rgb(0, 0, 0, 0.45);
+    margin: none;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-rounded {
+    border-radius: 6px;
+}
+
+.btn-xl {
+    font-size: 1.25rem;
+    padding: 1.5rem 2.5rem;
+    text-transform: capitalize;
+}
+
+.btn-lg {
+    font-size: 1rem;
+    padding: 0.8rem 1.3rem;
+    border-radius: 0.25rem;
+    text-transform: capitalize;
+}
