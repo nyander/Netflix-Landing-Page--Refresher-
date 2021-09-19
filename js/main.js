@@ -1,5 +1,6 @@
 const tabItems = document.querySelectorAll('.tab-item');
 const tabContentItems = document.querySelectorAll('.tab-content-item');
+var acc = document.getElementsByClassName("accordion");
 
 
 // Select tab content item
@@ -20,6 +21,22 @@ function removeBorder() {
 
 function removeShow() {
     tabContentItems.forEach(item => item.classList.remove('show'))
+}
+
+
+
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
 }
 
 
