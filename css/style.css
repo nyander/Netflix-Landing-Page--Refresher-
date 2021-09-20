@@ -229,7 +229,7 @@ img {
 }
 
 #tab-3-content .tab-3-content-bottom img {
-    width: 400px;
+    width: 100%;
 }
 
 
@@ -409,17 +409,23 @@ img {
         display: none;
     }
     .showcase-content h1 {
-        font-size: 3.5rem;
-        line-height: 3.5rem;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        width: 80%;
+    }
+    .showcase-content input {
+        padding: 1.5rem 0;
+        padding-right: 5rem;
+        padding-left: 1rem;
     }
     .showcase-content p {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     .footer .footer-cols {
         grid-template-columns: repeat(2, 1fr);
     }
     .btn-xl {
-        font-size: 1.5rem;
+        font-size: 1rem;
         padding: 1.4rem 2rem;
     }
     .text-xl {
